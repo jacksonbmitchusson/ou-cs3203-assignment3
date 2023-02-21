@@ -1,15 +1,21 @@
 
-def sumList(arr):
+def sumList(ls):
     total = 0
-    for i in arr:
+    for i in ls:
         total += i
     return total
 
-def multList(arr):
+def multList(ls):
     total = 1
-    for i in arr:
+    for i in ls:
         total *= i
     return total
+
+def reverseList(ls):
+    lsNew = []
+    for i in range(len(ls)):
+        lsNew.append(ls[-i])
+    return lsNew 
 
 userInput = ""
 list = []
