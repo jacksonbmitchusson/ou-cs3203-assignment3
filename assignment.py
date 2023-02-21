@@ -14,8 +14,13 @@ def multList(ls):
 def reverseList(ls):
     lsNew = []
     for i in range(len(ls)):
-        lsNew.append(ls[-i])
+        lsNew.append(ls[-i - 1])
     return lsNew 
+
+def printList(ls, msg):
+    print(msg, end = '');
+    for i in ls:
+        print(str(i) + " ", end = '')
 
 userInput = ""
 list = []
@@ -24,8 +29,9 @@ while(userInput != "x"):
     if userInput.isnumeric():
         list.append(int(userInput))
 
-print("Input: ", end='')
-for i in list:
-    print(str(i) + " ", end='')
+        
+printList(list, "\n\nInput: ")
+printList(reverseList(list), "\nReversed Input: ")
+
 print("\nSum of list: %d" % (sumList(list)))
 print("Product of list: %d" % (multList(list)))
